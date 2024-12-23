@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",                  // Frontend için geliştirme sunucusu
-    "build": "vite build",          // Üretim için derleme
-    "preview": "vite preview",      // Üretim ortamında preview
-    "start": "node server.js"       // Backend sunucusunu başlatmak için
+    "dev": "vite",                  
+    "build": "vite build",         
+    "preview": "vite preview",     
+    "start": "node server.js"      
   },
   "devDependencies": {
     "vite": "^5.4.2"
@@ -15,6 +15,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "socket.io": "^4.8.1",
-    "express": "^4.18.2"            // Express sunucusu ekledik
+    "express": "^4.18.2"          
   }
 }

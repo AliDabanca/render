@@ -1,6 +1,7 @@
 import { Server } from 'socket.io';
 import http from 'http';
 
+
 const httpServer = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('WebSocket sunucusu çalışıyor. WebSocket bağlantısı için uygun istemcileri kullanın.\n');
@@ -8,7 +9,7 @@ const httpServer = http.createServer((req, res) => {
 
 const io = new Server(httpServer, {
     cors: {
-        origin: "*",
+        origin: "*", 
     }
 });
 
@@ -34,7 +35,8 @@ io.on('connection', (socket) => {
     });
 });
 
-// Sunucuyu başlat
-httpServer.listen(3000, () => {
-    console.log('Sunucu http://localhost:3000 adresinde çalışıyor');
+
+const PORT = process.env.PORT || 3000;
+httpServer.listen(PORT, () => {
+    console.log(`Sunucu http://localhost:${PORT} adresinde çalışıyor`);
 });
